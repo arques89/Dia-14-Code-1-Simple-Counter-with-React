@@ -29,14 +29,14 @@ SecondsCounter.propTypes = {
 	cuarto: propTypes.number,
 };
 
-let count = 3600;
+let count = 0;
 setInterval(function () {
 	let cua = Math.floor(count / 1000);
 	let ter = Math.floor(count / 100);
 	let seg = Math.floor(count / 10);
 	let pri = Math.floor(count / 1);
 	console.log(cua % 10, ter % 10, seg % 10, pri % 10);
-	count--;
+	count++;
 	ReactDOM.render(
 		<SecondsCounter
 			primero={pri}
